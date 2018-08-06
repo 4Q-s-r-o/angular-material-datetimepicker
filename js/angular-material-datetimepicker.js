@@ -124,7 +124,7 @@
                         showTodaysDate: '@',
                         todayText: '@',
                         resetText: '@',
-                        showReset: '@'
+                        showReset: '='
                     },
                     link: function (scope, element, attrs, ngModel) {
                         var isOn = false;
