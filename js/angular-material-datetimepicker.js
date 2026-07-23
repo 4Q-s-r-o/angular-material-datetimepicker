@@ -267,9 +267,10 @@
         }])
     ;
 
-    var PluginController = function ($scope, $mdDialog, mdcDefaultParams) {
+    var PluginController = function ($scope, $mdDialog, mdcDefaultParams, options) {
         this.currentView = VIEW_STATES.DATE;
         this._dialog = $mdDialog;
+        this.options = options;
 
         this._attachedEvents = [];
         this.VIEWS = VIEW_STATES;
@@ -280,7 +281,7 @@
         this.init();
     };
 
-    PluginController.$inject = ['$scope', '$mdDialog', 'mdcDefaultParams'];
+    PluginController.$inject = ['$scope', '$mdDialog', 'mdcDefaultParams', 'options'];
     PluginController.prototype = {
         init: function () {
             this.timeMode = this.params.time && !this.params.date;
